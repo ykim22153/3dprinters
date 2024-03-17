@@ -13,6 +13,8 @@ SOFTWARE:  Configure CANbus for Stealthburner EBB SB 2240/2209 with Manta e3ez
 $ ssh biqu@ender5plus.local
 
 2. Update the os and instal tools
+'''text
+code();
 biqu@ender5plus:~$ sudo apt update
 biqu@ender5plus:~$ sudo apt upgrade
 biqu@ender5plus:~$ sudo apt install python3 python3-pip python3-can
@@ -22,6 +24,7 @@ biqu@ender5plus:~$ test -e ~/katapult && (cd ~/katapult && git pull) || (cd ~ &&
 biqu@ender5plus:~$ cd ~/katapult
 biqu@ender5plus:~$ make clean
 biqu@ender5plus:~$ make menuconfig
+'''
 ￼
 Hit “q” then “Y” to save. 
 
