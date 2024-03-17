@@ -13,8 +13,7 @@ SOFTWARE:  Configure CANbus for Stealthburner EBB SB 2240/2209 with Manta e3ez
 $ ssh biqu@ender5plus.local
 
 2. Update the os and instal tools
-'''text
-code();
+
 biqu@ender5plus:~$ sudo apt update
 biqu@ender5plus:~$ sudo apt upgrade
 biqu@ender5plus:~$ sudo apt install python3 python3-pip python3-can
@@ -24,13 +23,14 @@ biqu@ender5plus:~$ test -e ~/katapult && (cd ~/katapult && git pull) || (cd ~ &&
 biqu@ender5plus:~$ cd ~/katapult
 biqu@ender5plus:~$ make clean
 biqu@ender5plus:~$ make menuconfig
-'''
+
 ￼
 Hit “q” then “Y” to save. 
 
 4. Put the mainboard into DFU mode by pressing and holding down the “boot” button and pressing and releasing the “RST” button 
 ￼
 5. Check to see that the Pi can see the mainboard in DFU mode by running the following command:
+
 biqu@ender5plus:~$ sudo dfu-util -l
 du-util 0.9
 
@@ -45,6 +45,7 @@ Found DFU: [0483:df11] ver=0200, devnum=8, cfg=1, intf=0, path="2-1.1", alt=0, n
 biqu@ender5plus:~$ 
 
 6. Build the katapult firmware
+
 biqu@ender5plus:~$ cd katapult/
 biqu@ender5plus:~/katapult$ make
   Building out/autoconf.h
@@ -82,6 +83,7 @@ biqu@ender5plus:~/katapult$ make
 biqu@ender5plus:~/katapult$ 
 
 7. Write the katapult firmware you just built for the manta mainboard to the board by using the dfu-util
+
 biqu@ender5plus:~/katapult$ sudo dfu-util -R -a 0 -s 0x08000000:leave -D ~/katapult/out/katapult.bin -d 0483:df11
 dfu-util 0.9
 
@@ -110,17 +112,21 @@ dfu-util: Error during download get_status
 biqu@ender5plus:~/katapult$ 
 
 8. Reboot the Pi 
+
 biqu@ender5plus:~/katapult$ sudo reboot now
 
 9. Get mainboard out of DFU mode by pressing the RESET button twice, quickly.  
 10. Stop Klipper service by running the following command:
+
 biqu@ender5plus:~$ sudo service klipper stop
 
 11. Make sure the device attached shows up as a katapult device
+
 biqu@ender5plus:~$ ls /dev/serial/by-id
 usb-katapult_stm32g0b1xx_3D002C0002504B5735313920-if00
 
 12. Make the Klipper firmware for the manta mainboard
+
 biqu@ender5plus:~$ cd ~/klipper
 biqu@ender5plus:~/klipper$ make clean
 biqu@ender5plus:~/klipper$ make menuconfig
@@ -130,6 +136,7 @@ Configuration saved to '/home/biqu/klipper/.config'
 ￼
 Hit “Q” then “Y” to save. 
 13.  Make the firmware using make
+
 biqu@ender5plus:~/klipper$ make
   Creating symbolic link out/board
   Building out/autoconf.h
@@ -190,6 +197,7 @@ Version: v0.12.0-114-ga77d0790
 biqu@ender5plus:~/klipper$ 
 
 14. Install the firwmware onto the Manta mainboard
+
 biqu@ender5plus:~/klipper$ ls /dev/serial/by-id
 usb-katapult_stm32g0b1xx_3D002C0002504B5735313920-if00
 biqu@ender5plus:~/klipper$ python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_stm32g0b1xx_3D002C0002504B5735313920-if00
@@ -213,6 +221,7 @@ Flash Success
 biqu@ender5plus:~/klipper$ 
 
 15. Ensure Klipper is installed on the Manta mainboard
+
 biqu@ender5plus:~/klipper$ lsusb
 Bus 008 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus 004 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
@@ -227,6 +236,7 @@ Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 16. Ensure the can bus is up
+
 biqu@ender5plus:~/klipper$ ip -s -d link show can0
 4: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1024
     link/can  promiscuity 0 minmtu 0 maxmtu 0 
@@ -243,6 +253,7 @@ biqu@ender5plus:~/klipper$ ip -s -d link show can0
     0          0        0       0       0       0       
 
 17. Run the Klipper CANbus query to retrieve the canbus_UUID of the manta mainboard
+
 biqu@ender5plus:~/klipper$ ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
 
 Found canbus_uuid=b57a742e4b29, Application: Klipper
@@ -250,20 +261,26 @@ Total 1 uuids found
 biqu@ender5plus:~/klipper$ 
 
 18. Start the klipper service back up 
+
 biqu@ender5plus:~/klipper$ sudo service klipper start
 biqu@ender5plus:~/klipper$ 
 
 Install firmware on the EBB SB2240 RP2040
 1. Create the katapult firmware for the RP2040
 2. SSH into the raspberry PI 
+
 $ ssh biqu@ender5plus.local
+
 3. Run the following commands to build the firmware using katapult
+
 biqu@ender5plus:~$ cd katapult/
 biqu@ender5plus:~/katapult$ make clean
 biqu@ender5plus:~/katapult$ make menuconfig
 ￼
 Hit “Q” then “Y”
+
 4. Build the firmware using make 
+
 biqu@ender5plus:~/katapult$ make
   Creating symbolic link out/board
   Building out/autoconf.h
@@ -308,6 +325,7 @@ biqu@ender5plus:~/katapult$
 
 5. Connect the PI to the RP2040 board and make sure you insert the jumper to power the board from the USB
 6. Confirm the board is in BOOT mode
+
 biqu@ender5plus:~$ lsusb
 Bus 008 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus 004 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
@@ -324,6 +342,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 biqu@ender5plus:~$ 
 
 7. Flash the katapult firmware to the RP2040
+
 biqu@ender5plus:~$ cd katapult/
 biqu@ender5plus:~/katapult$ make flash FLASH_DEVICE=2e8a:0003
   Building rp2040_flash
@@ -343,6 +362,7 @@ Rebooting device
 biqu@ender5plus:~/katapult$ 
 
 8. Shutdown the PI and then shutdown the printer.  
+
 biqu@ender5plus:~/katapult$ sudo shutdown now
 Connection to ender5plus.local closed by remote host.
 Connection to ender5plus.local closed.
@@ -352,6 +372,7 @@ Connecting up the CAN cable
 2. Install the CANbus cable into the RP2040 and wire the CANH and CANL to the ports on the manta respectively. 
 3. Power on the printer
 4. SSH into the PI
+
 biqu@ender5plus:~$ python3 ~/katapult/scripts/flashtool.py -i can0 -q
 Resetting all bootloader node IDs...
 Checking for Katapult nodes...
@@ -361,6 +382,7 @@ Query Complete
 biqu@ender5plus:~$ 
 
 5. Make the klipper firmware for the RP2040
+
 biqu@ender5plus:~$ cd klipper/
 biqu@ender5plus:~/klipper$ make clean
 biqu@ender5plus:~/klipper$ make menuconfig
@@ -371,10 +393,12 @@ Configuration saved to '/home/biqu/klipper/.config'
 Hit “Q” and then “Y” to save
 
 6. Stop the klipper service
+
 biqu@ender5plus:~/klipper$ sudo service klipper stop
 biqu@ender5plus:~/klipper$ 
 
 7. Query the CANbus to get the UUID
+
 biqu@ender5plus:~/klipper$ python3 ~/katapult/scripts/flashtool.py -i can0 -q
 Resetting all bootloader node IDs...
 Checking for Katapult nodes...
@@ -384,6 +408,7 @@ Query Complete
 biqu@ender5plus:~/klipper$ 
 
 8. Flash the RP2040 with klipper
+
 biqu@ender5plus:~/klipper$ python3 ~/katapult/scripts/flashtool.py -i can0 -u 9bba08420308 -f ~/klipper/out/klipper.bin
 Sending bootloader jump command...
 Resetting all bootloader node IDs...
@@ -408,6 +433,7 @@ Flash Success
 biqu@ender5plus:~/klipper$ 
 
 9. Confirm flash has been completed
+
 biqu@ender5plus:~/klipper$ python3 ~/katapult/scripts/flashtool.py -i can0 -q
 Resetting all bootloader node IDs...
 Checking for Katapult nodes...
