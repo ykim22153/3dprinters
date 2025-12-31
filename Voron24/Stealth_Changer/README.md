@@ -10,12 +10,20 @@ StealthChanger Documentation: [https://www.stealthchanger.com](URL)
 N3MI StealthChanger Guide for AntHead: [https://github.com/N3MI-DG/sc-guides/tree/main/Anthead](URL)  
 Sdylewski's Documentation: [https://sdylewski.github.io/StealthChanger/](URL)  
 
-## LDO Kits:
+## Hardware Parts and Kits:
 1. StealthChanger Base Kit
 2. StealthChanger Top Hat and Door Buffer Kit
 3. StealthChanger Tool and Dock Kit
+4. LDO Orbiter v2.5
+5. OSS 2 Filament Sensor
+6. Revo Hotend HF 60W
 
 ## Printed Parts BOM:
-### AntHead Tool Head
+Red Parts are printed with eSun ABS+
+Blue Parts are printed with Creality ABS
 
-
+### AntHead Tool Head:  
+1. ant_head_main_body_voron_o2_hf_x1.stl
+2. Nozzle LED Carrier.stl
+3. [a] Nozzle LED Restraint.stl
+4. 
