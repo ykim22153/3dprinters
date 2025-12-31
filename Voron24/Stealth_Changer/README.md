@@ -48,6 +48,6 @@ BLUE Parts are printed with Creality ABS
 4. RED -- Right Standard.stl (Magnetized)
 5. RED -- Pucks Standard.stl (Magnetized)
 
-SC Component	Part Name	Part Color	Part URL<img width="261" height="65" alt="image" src="https://github.com/user-attachments/assets/220005f9-81ed-49d8-b037-8925a71b70cc" />
+
 
 
