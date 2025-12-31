@@ -4,6 +4,8 @@ Voron 2.4 rev C LDO Kit
 BTT Kraken Mainboard  
 CNC Part Kit
 Voron Tap 2.0
+Clicky-Klack Door
+
 
 Hardware kits were purchased from various vendors including KB-3D.com, Fabreeko.com and West3D.com.
 
