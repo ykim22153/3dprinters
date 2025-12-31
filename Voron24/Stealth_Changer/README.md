@@ -33,21 +33,47 @@ RED Parts are printed with eSun ABS+
 BLUE Parts are printed with Creality ABS
 
 ### AntHead Tool Head:  
-1. RED -- ant_head_main_body_voron_o2_hf_x1.stl
-2. RED -- [a] Nozzle LED Carrier.stl
-3. BLUE -- [a] Nozzle LED Restraint.stl
-4. BLUE -- [a]_hex_gril_x1.stl
-5. BLUE -- [a]_revo_voron_x1.stl
-6. BLUE -- Left_Duct_Standard.stl (Magnetized)
-7. BLUE -- Right_Duct_Standard.stl (Magnetized)
+1. ant_head_main_body_voron_o2_hf_x1.stl
+2. [a] Nozzle LED Carrier.stl
+3. [a] Nozzle LED Restraint.stl
+4. [a]_hex_gril_x1.stl
+5. [a]_revo_voron_x1.stl
+6. Left_Duct_Standard.stl (Magnetized)
+7. Right_Duct_Standard.stl (Magnetized)
 
-### Modular Frame
-1. RED -- Top_Crossbar.stl
-2. RED -- Bottom_Crossbar.stl
-3. RED -- Left Standard.stl (Magnetized)
-4. RED -- Right Standard.stl (Magnetized)
-5. RED -- Pucks Standard.stl (Magnetized)
+### StealthChanger Toolhead Backplate:
+1. Anthead_HF.stl
+2. Anthead_Spacer_Full.stl
 
+### StealthChanger Modular Frame:
+1. Top_Crossbar.stl
+2. Bottom_Crossbar.stl
+3. Left Standard.stl (Magnetized)
+4. Right Standard.stl (Magnetized)
+5. Pucks Standard.stl (Magnetized)
+6. Base.stl
+7. Back.stl
+
+### StealthChanger FannyPack
+1. [a]_sc_voron_cover.stl
+2. base.stl
+3. [a]_hexa_bracket_v1.3.arl
+
+### StealthChanger DoorBuffer
+1. Top left corner.stl
+2. Top right corner.stl
+3. Top.stl
+4. Left.stl
+5. Right.stl
+6. Bottom left corner.stl
+7. Bottom right corner.stl
+8. Bottom.stl
+
+### StealthChanger Top Hat Hinges
+1. LDO TopHat Hinge (3mm foam).stl
+
+
+# Printed Parts BOM Table
 | SC Component       | Part Name                             | Part Color | Part URL                                                                                                                   |
 | ------------------ | ------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------- |
 | AntHead Toolhead   | ant_head_main_body_voron_o2_hf_x1.stl | RED        | https://github.com/PrintersForAnts/AntHead/blob/main/STLs/Main_Bodies/O2/Voron/ant_head_main_body_voron_o2_hf_x1.stl       |
