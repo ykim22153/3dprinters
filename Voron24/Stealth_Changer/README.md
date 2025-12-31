@@ -1,6 +1,6 @@
-# Draftshift Design Stealthchanger Upgrade of Voron 2.4 350 mm using the LDO Kit
+# StealthChanger Upgrade of Voron 2.4 350 mm
 
-Kits were purchased from various vendors including KB-3D, Fabreeko and West3D.
+Hardware kits were purchased from various vendors including KB-3D.com, Fabreeko.com and West3D.com.
 
 Very useful websites for build and configuration instructions:
 LDO Documentation on StealthChanger:  [https://docs.ldomotors.com/en/StealthChanger/planning_guide](IRL)
