@@ -1,4 +1,9 @@
 # StealthChanger Upgrade of Voron 2.4 350 mm
+### Original HW Configuration:
+Voron 2.4 rev C LDO Kit  
+BTT Kraken Mainboard  
+CNC Part Kit
+Voron Tap 2.0
 
 Hardware kits were purchased from various vendors including KB-3D.com, Fabreeko.com and West3D.com.
 
@@ -18,6 +23,9 @@ Sdylewski's Documentation: [https://sdylewski.github.io/StealthChanger/](URL)
 5. OSS 2 Filament Sensor
 6. Revo Hotend HF 60W
 
+##Toolhead Selection and Modifications
+N3MI magnetized Anthead
+
 ## Printed Parts BOM:
 RED Parts are printed with eSun ABS+
 BLUE Parts are printed with Creality ABS
@@ -28,7 +36,14 @@ BLUE Parts are printed with Creality ABS
 3. BLUE -- [a] Nozzle LED Restraint.stl
 4. BLUE -- [a]_hex_gril_x1.stl
 5. BLUE -- [a]_revo_voron_x1.stl
-6. BLUE -- Left_Duct_Standard.stl
-7. BLue -- Right_Duct_Standard.stl
-8. 
-   
+6. BLUE -- Left_Duct_Standard.stl (Magnetized)
+7. BLUE -- Right_Duct_Standard.stl (Magnetized)
+
+### Modular Frame
+1. RED -- Top_Crossbar.stl
+2. RED -- Bottom_Crossbar.stl
+3. RED -- Left Standard.stl (Magnetized)
+4. RED -- Right Standard.stl (Magnetized)
+5. RED -- Pucks Standard.stl (Magnetized)
+
+
