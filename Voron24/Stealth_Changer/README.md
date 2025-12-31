@@ -53,7 +53,7 @@ BLUE Parts are printed with Creality ABS
 5. Pucks Standard.stl (Magnetized)
 6. Base.stl
 7. Back.stl  
-*Note:  Size is standard for Modular Frame pieces...consider upgrading to short frames and stubby bases.  
+*Note:  Size is standard for Modular Frame pieces...consider upgrading to short frames and stubby bases to conserve space.  
 
 ### StealthChanger FannyPack
 1. [a]_sc_voron_cover.stl
