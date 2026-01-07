@@ -2,8 +2,8 @@
 ### Original HW Configuration:
 Voron 2.4 rev C LDO Kit  
 BTT Kraken Mainboard  
-CNC Part Kit
-Voron Tap 2.0
+CNC Part Kit  
+Voron Tap 2.0  
 Clicky-Klack Door
 
 
