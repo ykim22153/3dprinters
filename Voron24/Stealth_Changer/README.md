@@ -18,9 +18,9 @@ N3MI StealthChanger Guide for AntHead: https://github.com/N3MI-DG/sc-guides/tree
 Sdylewski's Documentation: https://sdylewski.github.io/StealthChanger/  
 
 ## Hardware Parts and Kits:
-1. StealthChanger Base Kit
-2. StealthChanger Top Hat and Door Buffer Kit
-3. StealthChanger Tool and Dock Kit
+1. LDO StealthChanger Base Kit
+2. LDO StealthChanger Top Hat and Door Buffer Kit
+3. LDO StealthChanger Tool and Dock Kit
 4. LDO Orbiter v2.5
 5. OSS 2 Filament Sensor
 6. Revo Hotend HF 60W
